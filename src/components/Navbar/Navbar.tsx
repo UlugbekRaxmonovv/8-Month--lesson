@@ -9,7 +9,7 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import { VscChromeClose } from "react-icons/vsc";
 import { TbMenuDeep } from "react-icons/tb";
 const Navbar = () => {
-    const [show, setShow    ] = useState(false);
+    const [show, setShow] = useState<boolean>(false);
     return (
         <div>
             <header>
