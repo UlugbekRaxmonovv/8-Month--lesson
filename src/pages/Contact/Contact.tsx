@@ -1,9 +1,35 @@
+import {useState,ChangeEvent} from 'react';
 import './Contact.css'
 import Footer from '../../components/Footer/Footer';
 import { FaPhoneVolume } from "react-icons/fa6";
 import { MdOutgoingMail } from "react-icons/md";
 
+
+interface Contact{
+  username: string,  
+  email: string, 
+  message:string }
+
+let initialState:Contact= {
+  username: '',
+  email: '',
+  message: ''
+}
+
 const Contact = () => {
+  const [contact, setContact] = useState<Contact>(initialState);
+
+  const HandelSubmit = (e: ChangeEvent<HTMLInputElement> )=>{
+    let {value,name} = e.target
+    setContact({...contact, [name]: value})
+
+  }
+  const handelSubmit = (e: React.FormEvent<HTMLFormElement>)=>{
+    e.preventDefault()
+    console.log(contact)
+  }
+
+  
     return (
         <div>
           <div className=" contact_all container">
@@ -28,14 +54,14 @@ const Contact = () => {
             </div>
 
             <div className="contact">
-              <form className="form">
+              <form className="form" onSubmit={handelSubmit}>
              <label htmlFor="">Name</label> <br />
-             <input type="text"  placeholder='Your name'/> <br />
+             <input type="text"  onChange={HandelSubmit}  name='username' placeholder='Your name'/> <br />
 
              <label htmlFor="">E-mail</label> <br />
-             <input type="text"  placeholder='Your email'/> <br />
+             <input type="text"  onChange={HandelSubmit} name='email'  placeholder='Your email'/> <br />
              <label htmlFor="">Message</label> <br />
-             <textarea placeholder='Your message'>
+             <textarea  placeholder='Your message' name='message'>
                 
              </textarea>
              <div className="btn">
