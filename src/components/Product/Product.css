@@ -1,0 +1,59 @@
+*{
+    font-family: "Open Sans", sans-serif;
+
+}
+.h1 h1{
+    font-family: Lexend;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 54px;
+    letter-spacing: -0.05em;
+  text-align: center;    
+  padding: 20px 0;
+  margin-top: 40px;
+  color: #1F2533;
+
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.card{
+    width:255px;
+    height: 349px;  
+}
+.card  img{
+    width:255px;
+    height: 255px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+.card h3{
+    text-align: center;
+    font-family: Lexend;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 34px;
+    letter-spacing: -0.05em;
+    color: #1F2533;   
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.card p{
+    font-family: Lexend;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+    text-align: center;
+    color: #1F2533;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    
+}

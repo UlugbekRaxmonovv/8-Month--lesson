@@ -1,13 +1,17 @@
 
 import Navbar from './components/Navbar/Navbar'
-import Main from './components/Main/Main'
-
+import Home from './pages/Home/Home'
+import Contact from './pages/Contact/Contact'
+import { Routes,Route } from 'react-router-dom'
 function App() {
 
   return (
     <>
    <Navbar/>
-   <Main/>
+  <Routes>
+    <Route path="/" element={<Home/>} />
+    <Route path="/contact" element={<Contact/>} />
+  </Routes>
      
     </>
   )

@@ -8,6 +8,7 @@ import { IoMdHeartEmpty } from "react-icons/io";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { VscChromeClose } from "react-icons/vsc";
 import { TbMenuDeep } from "react-icons/tb";
+import { Link } from 'react-router-dom';
 const Navbar = () => {
     const [show, setShow] = useState(false);
     return (
@@ -15,7 +16,7 @@ const Navbar = () => {
             <header>
                 <div className="container">
                 <nav>
-                      <img src={rasm} alt="" />
+                <Link to={'/'}>      <img src={rasm} alt="" /></Link>
                   <div className="all">
                   <div className="inputt">
                         <div className="input_alll">
@@ -38,7 +39,7 @@ const Navbar = () => {
                             <a href="" className="">OUR BLOG</a>
                         </li>
                         <li>
-                            <a href="" className="">CONTACTS</a>
+                            <Link to={'/contact'}>CONTACTS</Link>
                         </li>
                       </ul>
                       <div className="nav_link">
